@@ -1,1 +1,53 @@
- 
+.ratings {
+  line-height: 1;
+  li {
+    color: var(--clr-primary-700);
+    background: var(--clr-neutral-200);
+    font-weight: 800;
+    padding: 0.75rem 2rem;
+    border-radius: var(--br);
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    // &::before {
+    //   content: "";
+    //   width: 100px;
+    //   // svg height is 16px
+    //   height: 1rem;
+    //   margin: 0 auto;
+    //   display: block;
+    //   background-image: url(../images/icon-star.svg);
+    //   margin-bottom: 0.5rem;
+    //   background-repeat: space;
+    // }
+    @media (min-width: 50em) {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        margin: 0 1.5rem 0 0;
+      }
+
+      &:first-of-type {
+        transform: translateX(-3rem);
+      }
+
+      &:last-of-type {
+        transform: translateX(3rem);
+      }
+    }
+  }
+  img {
+    // display: inline-block;
+    margin: 0 0.5rem 0.5rem;
+    @media (min-width: 50em) {
+      margin: -0.25rem 0.5rem 0 0;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
